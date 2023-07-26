@@ -1,0 +1,82 @@
+@import "./src/constants";
+
+.item2 {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $black;
+  padding: 10px;
+  gap: 40px;
+  position: relative;
+
+  @media (max-width: 470px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img{
+    width: 70px;
+    height: 70px;
+  }
+
+  h3 {
+    font-weight: 20px;
+    margin-bottom: 15px;
+  }
+
+  b {
+    color: gray;
+    font-weight: 600;
+  }
+
+  .price {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+
+    &_title {
+      display: block;
+      color: green;
+    }
+  }
+
+  .count {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+
+    b {
+      font-size: 25px;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .remove {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+      color: gray;
+    }
+    svg {
+      &:active {
+        transform: scale(1.04);
+      }
+    }
+  }
+}

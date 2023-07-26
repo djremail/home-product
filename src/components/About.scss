@@ -1,0 +1,23 @@
+@import "./src/constants";
+
+.about,
+.contacts-block{
+  max-width: 900px;
+  margin: 50px auto;
+  line-height: 1.7rem;
+  text-align: justify;
+}
+
+.contacts-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
